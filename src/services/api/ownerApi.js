@@ -1,5 +1,5 @@
 import customFetchBase from "./customFetchBase.js";
-import { toast } from "../../components/ui/use-toast.tsx";
+import { toast } from "../../components/ui/use-toast.ts";
 import { authApi } from "./authApi.js";
 
 export const ownerApi = authApi.injectEndpoints({

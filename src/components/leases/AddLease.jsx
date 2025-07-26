@@ -12,16 +12,16 @@ import {
 } from "../ui/dialog.tsx";
 import {Form, FormControl, FormField, FormGroup, FormItem, FormLabel, FormMessage} from "../ui/form.tsx";
 import {Input} from "../ui/input.tsx";
-import RentalSelection from "../comboboxes/RentalSelection.js";
+import RentalSelection from "../comboboxes/RentalSelection.jsx";
 import {useGetUnitsQuery} from "../../services/api/unitApi.js";
-import TenantSelection from "../comboboxes/TenantSelection.js";
+import TenantSelection from "../comboboxes/TenantSelection.jsx";
 import {useGetTenantsQuery} from "../../services/api/tenantApi.js";
 import {Button} from "../ui/button.tsx";
 import {FilePlus2, PlusIcon} from "lucide-react";
 import {zodDateInputPipe, zodNumberInputPipe, zodStringPipe} from "../../utils/formatters.js";
 import {useCreateLeaseMutation} from "../../services/api/leaseApi.js";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "../ui/select.tsx";
-import {LeaseStatus, PaymentFrequency} from "../../utils/magicNumbers.js";
+import {LeaseStatus, PaymentFrequency} from "../../utils/magicNumbers.jsx";
 
 
 const AddLease = ({unit, tenant, ...props}) => {

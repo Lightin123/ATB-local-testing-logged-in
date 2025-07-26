@@ -1,7 +1,7 @@
 import customFetchBase from "./customFetchBase.js";
 import {setUser} from "../auth/authSlice.js";
 import {logoutUser} from "../auth/authActions.js";
-import {toast} from "../../components/ui/use-toast.tsx";
+import {toast} from "../../components/ui/use-toast.ts";
 import {authApi} from "./authApi.js";
 
 

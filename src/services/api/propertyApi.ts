@@ -1,5 +1,5 @@
 import { authApi } from "./authApi.js";
-import { toast } from "../../components/ui/use-toast.tsx";
+import { toast } from "../../components/ui/use-toast.ts";
 
 interface MaintenanceRequest {
   id: number;

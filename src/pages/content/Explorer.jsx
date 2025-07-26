@@ -1,4 +1,4 @@
-import StreetMap from "../../components/explorer/StreetMap.js";
+import StreetMap from "../../components/explorer/StreetMap.jsx";
 import {useState} from "react";
 
 const Explorer = () => {

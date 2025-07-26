@@ -1,10 +1,10 @@
 import React, { useMemo } from 'react';
 import { ColumnDef } from '@tanstack/react-table';
 import { useGetMaintenanceReportsQuery } from '../../services/api/maintenanceApi.js';
-import { MaintenanceStatus, Priority } from '../../utils/magicNumbers.js';
+import { MaintenanceStatus, Priority } from '../../utils/magicNumbers.jsx';
 import { dateParser } from '../../utils/formatters.js';
 import { MaintenanceStatusBadge, PriorityBadge } from '../../utils/statusBadges';
-import { DataTable } from '../ui/data-table.js';
+import { DataTable } from '../ui/data-table.jsx';
 import Link from '../general/Link.tsx';
 import { Badge } from '../ui/badge.tsx';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../ui/dropdown-menu.tsx';

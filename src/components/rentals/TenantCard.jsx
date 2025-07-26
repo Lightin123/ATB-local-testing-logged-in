@@ -4,7 +4,7 @@ import {Button} from "../ui/button.tsx";
 import {dateParser} from "../../utils/formatters.js";
 import {useNavigate, useParams} from "react-router-dom";
 import {Plus, UserIcon, UserRoundX, XIcon} from "lucide-react";
-import TenantSelection from "../comboboxes/TenantSelection.js";
+import TenantSelection from "../comboboxes/TenantSelection.jsx";
 import {useState} from "react";
 import {useSelector} from "react-redux";
 import {selectAllTenants} from "../../services/slices/objectSlice.js";

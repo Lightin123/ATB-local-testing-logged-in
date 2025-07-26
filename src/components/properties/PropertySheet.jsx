@@ -5,7 +5,7 @@ import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious}
 import {Image} from "../ui/image.tsx";
 import {Tabs, TabsContent, TabsList, TabsItem} from "../ui/tabs-new.tsx";
 import {dateParser, moneyParser} from "../../utils/formatters.js";
-import {RealEstateType} from "../../utils/magicNumbers.js";
+import {RealEstateType} from "../../utils/magicNumbers.jsx";
 import RentalTable from "../rentals/RentalTable.tsx";
 import {selectUnitsByPropertyId} from "../../services/slices/objectSlice.js";
 import {useSelector} from "react-redux";

@@ -1,5 +1,5 @@
-import EditSettings from "../../components/profile/EditSettings.js";
-import EditProfile from "../../components/profile/EditProfile.js";
+import EditSettings from "../../components/profile/EditSettings.jsx";
+import EditProfile from "../../components/profile/EditProfile.jsx";
 import {Tabs, TabsContent, TabsItem, TabsList} from "../../components/ui/tabs-new.tsx";
 import {useLocation, useNavigate} from "react-router-dom";
 import {CircleUser, Settings2} from "lucide-react";

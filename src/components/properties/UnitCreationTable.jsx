@@ -12,7 +12,7 @@ import {Copy, Plus, Trash} from "lucide-react";
 import {Button} from "../ui/button.tsx";
 import {FormControl} from "../ui/form.tsx";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "../ui/select.tsx";
-import {ListingStatus, RentalStatus} from "../../utils/magicNumbers.js";
+import {ListingStatus, RentalStatus} from "../../utils/magicNumbers.jsx";
 
 
 const UnitCreationTable = ({ units, onChange }) => {

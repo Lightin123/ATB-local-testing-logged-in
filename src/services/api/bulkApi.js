@@ -1,6 +1,6 @@
 import {authApi} from "./authApi.js";
 import customFetchBase from "./customFetchBase.js";
-import {toast} from "../../components/ui/use-toast.tsx";
+import {toast} from "../../components/ui/use-toast.ts";
 
 
 export const bulkApi = authApi.injectEndpoints({

@@ -1,5 +1,5 @@
 import {Card, CardHeader, CardTitle,CardContent,CardDescription} from "../../components/ui/card.tsx";
-import InfoCard from "../../components/home/InfoCard.js";
+import InfoCard from "../../components/home/InfoCard.jsx";
 import {useGetPropertiesQuery} from "../../services/api/propertyApi.ts";
 import {useGetUnitsQuery} from "../../services/api/unitApi.js";
 import {useGetTenantsQuery} from "../../services/api/tenantApi.js";
@@ -24,7 +24,7 @@ import {useGetPaymentsQuery} from "../../services/api/financialsApi.js";
 import {Avatar, AvatarFallback, AvatarImage} from "../../components/ui/avatar.tsx";
 import {dateParser} from "../../utils/formatters.js";
 import {PiHandCoins} from "react-icons/pi";
-import DetailedPropertyTable from "../../components/properties/DetailedPropertyTable.js";
+import DetailedPropertyTable from "../../components/properties/DetailedPropertyTable.jsx";
 
 const Home = () => {
     const navigate = useNavigate();

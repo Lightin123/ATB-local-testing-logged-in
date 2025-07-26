@@ -1,6 +1,6 @@
 import {Card, CardContent, CardFooter} from "../ui/card.tsx";
 import {Link} from "react-router-dom";
-import PropertyStatus from "./PropertyStatus.js";
+import PropertyStatus from "./PropertyStatus.jsx";
 
 const PropertyCard = ({ property, children }) => {
 

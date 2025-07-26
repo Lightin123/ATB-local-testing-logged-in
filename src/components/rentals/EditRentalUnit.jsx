@@ -23,7 +23,7 @@ import {
 import {Building} from "lucide-react";
 import {Input} from "../ui/input.tsx";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "../ui/select.tsx";
-import {ListingStatus} from "../../utils/magicNumbers.js";
+import {ListingStatus} from "../../utils/magicNumbers.jsx";
 import {Button} from "../ui/button.tsx";
 import {useUpdateUnitMutation} from "../../services/api/unitApi.js";
 

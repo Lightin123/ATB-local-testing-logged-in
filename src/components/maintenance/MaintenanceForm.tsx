@@ -15,9 +15,9 @@ import {
 import { Input } from '../ui/input.tsx';
 import { Textarea } from '../ui/textarea.tsx';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select.tsx';
-import { MaintenanceStatus, Priority } from '../../utils/magicNumbers.js';
+import { MaintenanceStatus, Priority } from '../../utils/magicNumbers.jsx';
 import { Button } from '../ui/button.tsx';
-import RentalSelection from '../comboboxes/RentalSelection.js';
+import RentalSelection from '../comboboxes/RentalSelection.jsx';
 import { Checkbox } from '../ui/checkbox.tsx';
 import { ToggleGroup, ToggleGroupItem } from '../ui/toggle-group.tsx';
 import { cn } from '../../utils.ts';

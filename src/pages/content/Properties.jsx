@@ -1,5 +1,5 @@
 import PropertyTable from "../../components/properties/PropertyTable.tsx";
-import DetailedPropertyTable from "../../components/properties/DetailedPropertyTable.js";
+import DetailedPropertyTable from "../../components/properties/DetailedPropertyTable.jsx";
 import {Button} from "../../components/ui/button.tsx";
 import {useState} from "react";
 import {selectPropertiesByPropertyId} from "../../services/slices/objectSlice.js";

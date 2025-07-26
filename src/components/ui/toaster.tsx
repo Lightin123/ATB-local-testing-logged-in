@@ -7,7 +7,7 @@ import {
     ToastTitle,
     ToastViewport,
 } from "./toast.tsx"
-import { useToast } from "./use-toast.tsx"
+import { useToast } from "./use-toast.ts"
 import {AlertCircle, CheckCircle, CheckCircle2} from "lucide-react";
 import {cn} from "../../utils.ts";
 

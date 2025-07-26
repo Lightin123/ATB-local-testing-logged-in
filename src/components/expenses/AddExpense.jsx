@@ -16,9 +16,9 @@ import {
 } from "../ui/form.tsx";
 import {Input} from "../ui/input.tsx";
 import {Textarea} from "../ui/textarea.tsx";
-import LeaseSelection from "../comboboxes/LeaseSelection.js";
+import LeaseSelection from "../comboboxes/LeaseSelection.jsx";
 import {ExternalLink, FilePlus2, Plus} from "lucide-react";
-import RentalSelection from "../comboboxes/RentalSelection.js";
+import RentalSelection from "../comboboxes/RentalSelection.jsx";
 import {useGetLeasesQuery} from "../../services/api/leaseApi.js";
 import {useCreateExpenseMutation} from "../../services/api/financialsApi.js";
 

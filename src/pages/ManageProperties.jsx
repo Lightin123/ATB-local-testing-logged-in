@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useGetPropertiesQuery } from '../services/api/propertyApi.ts';
-import PropertyCard from '../components/properties/PropertyCard.js';
+import PropertyCard from '../components/properties/PropertyCard.jsx';
 
 export default function ManageProperties() {
   const { data, isLoading, error } = useGetPropertiesQuery();

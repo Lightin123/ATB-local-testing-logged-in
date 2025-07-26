@@ -2,7 +2,7 @@ import {Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigg
 import {useGetPropertiesQuery} from "../../services/api/propertyApi.ts";
 import {useDispatch, useSelector} from "react-redux";
 import {selectProperty} from "../../services/slices/userSlice.js";
-import {getRealEstateIcon, RealEstateType} from "../../utils/magicNumbers.js";
+import {getRealEstateIcon, RealEstateType} from "../../utils/magicNumbers.jsx";
 import {selectPropertyById} from "../../services/slices/objectSlice.js";
 import {DeleteIcon, Eye, MoreVertical} from "lucide-react";
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "../ui/dropdown-menu.tsx";

@@ -2,7 +2,7 @@ import * as React from "react"
 
 import {cn} from "../../utils.ts";
 import {useSelector} from "react-redux";
-import {CurrencySymbol} from "../../utils/magicNumbers.js";
+import {CurrencySymbol} from "../../utils/magicNumbers.jsx";
 import {getLang} from "../../utils/formatters.js";
 import CurrencyInput  from "react-currency-input-field";
 import {PhoneInput} from "./phone-input.tsx";

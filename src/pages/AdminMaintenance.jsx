@@ -4,7 +4,7 @@ import UnitSelect from '../components/selects/UnitSelect.jsx';
 import OwnerSelect from '../components/selects/OwnerSelect.jsx';
 import TenantSelect from '../components/selects/TenantSelect.jsx';
 import TagMultiSelect from '../components/selects/TagMultiSelect.jsx';
-import { MaintenanceStatusBadge } from '../utils/statusBadges.js';
+import { MaintenanceStatusBadge } from '../utils/statusBadges.jsx';
 
 export default function AdminMaintenance({ reports }) {
   const role = useSelector(s => s.authSlice.userInfo?.role);

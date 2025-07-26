@@ -1,5 +1,5 @@
 import React from "react";
-import ErrorMessage from "../components/notifications/ErrorAlert.js";
+import ErrorMessage from "../components/notifications/ErrorAlert.jsx";
 import {useSelector} from "react-redux";
 
 

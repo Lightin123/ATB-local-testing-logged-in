@@ -36,24 +36,24 @@ import {
     LeaseStatus,
     ListingStatus,
     PaymentFrequency
-} from "../../utils/magicNumbers.js";
-import {RealEstateType} from "../../utils/magicNumbers.js";
+} from "../../utils/magicNumbers.jsx";
+import {RealEstateType} from "../../utils/magicNumbers.jsx";
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "../../components/ui/carousel.tsx";
 import {Button} from "../../components/ui/button.tsx";
 import {useCreatePropertyMutation} from "../../services/api/propertyApi.ts";
 import {useNavigate} from "react-router-dom";
 import {addDays} from "date-fns";
-import LeaseSelection from "../../components/comboboxes/LeaseSelection.js";
+import LeaseSelection from "../../components/comboboxes/LeaseSelection.jsx";
 import {useSelector} from "react-redux";
 import {selectAllLeases, selectAllUnits} from "../../services/slices/objectSlice.js";
 import {dateParser, moneyParser} from "../../utils/formatters.js";
 import {Alert, AlertDescription, AlertTitle} from "../../components/ui/alert.tsx";
-import RentalSelection from "../../components/comboboxes/RentalSelection.js";
+import RentalSelection from "../../components/comboboxes/RentalSelection.jsx";
 import {useCreateTenantMutation} from "../../services/api/tenantApi.js";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "../../components/ui/tooltip.tsx";
 import {BiQuestionMark} from "react-icons/bi";
 import {AiOutlineQuestionCircle} from "react-icons/ai";
-import {Progress} from "../../components/ui/multi-step.js";
+import {Progress} from "../../components/ui/multi-step.jsx";
 
 
 const TenantCreation = () => {

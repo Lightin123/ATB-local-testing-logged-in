@@ -15,7 +15,7 @@ import {cn} from "../../utils.ts";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "../ui/tabs.tsx";
 import PaymentTable from "../financials/PaymentTable.tsx";
 import PaymentScheduleTable from "../financials/PaymentScheduleTable.tsx";
-import {LeaseStatus} from "../../utils/magicNumbers.js";
+import {LeaseStatus} from "../../utils/magicNumbers.jsx";
 import ExpensesTable from "../financials/ExpensesTable.tsx";
 
 

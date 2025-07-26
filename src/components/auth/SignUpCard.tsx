@@ -12,7 +12,7 @@ import { RadioGroup, RadioGroupItem } from '../ui/radio-group.tsx'
 import { Input } from '../ui/input.tsx'
 import { Button } from '../ui/button.tsx'
 import { AiFillRocket } from 'react-icons/ai'
-import { toast } from '../ui/use-toast.tsx'
+import { toast } from '../ui/use-toast.ts'
 
 const signUpFormSchema = z.object({
   role: z.enum(['TENANT', 'OWNER'], { required_error: 'Role required' }),

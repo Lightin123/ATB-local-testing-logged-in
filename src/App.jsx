@@ -25,7 +25,7 @@ import {
   AccountPage,
   MessagesPage,
   MaintenancePage,
-} from './pages/WrappedPages.js';
+} from './pages/WrappedPages.jsx';
 import PropertyDetailsPage from './pages/PropertyDetailsPage.jsx';
 import ContactUs from './pages/ContactUs';
 import WhoWeAre from './pages/WhoWeAre.jsx';

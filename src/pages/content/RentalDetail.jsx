@@ -1,9 +1,9 @@
 import {useParams} from "react-router-dom";
-import RentalKeyCard from "../../components/rentals/RentalKeyCard.js";
+import RentalKeyCard from "../../components/rentals/RentalKeyCard.jsx";
 import {Label} from "../../components/ui/label.tsx";
 import {BathIcon, BedIcon, CarFront, FilePlus2, LandPlot} from "lucide-react";
 import {dateParser, numberToLiteral} from "../../utils/formatters.js";
-import TenantCard from "../../components/rentals/TenantCard.js";
+import TenantCard from "../../components/rentals/TenantCard.jsx";
 import {useSelector} from "react-redux";
 import {
     selectExpensesByUnitId,
@@ -12,13 +12,13 @@ import {
 } from "../../services/slices/objectSlice.js";
 import LeaseHistory from "../../components/leases/LeaseHistory.tsx";
 import {Button} from "../../components/ui/button.tsx";
-import AddLease from "../../components/leases/AddLease.js";
+import AddLease from "../../components/leases/AddLease.jsx";
 import {useState} from "react";
-import PropertySheet from "../../components/properties/PropertySheet.js";
+import PropertySheet from "../../components/properties/PropertySheet.jsx";
 import {Tabs, TabsContent, TabsItem, TabsList} from "../../components/ui/tabs-new.tsx";
 import Maintenance from "../../components/maintenance/Maintenance";
 import ExpensesTable from "../../components/financials/ExpensesTable.tsx";
-import RentalImagesCard from "../../components/rentals/RentalImagesCard.js";
+import RentalImagesCard from "../../components/rentals/RentalImagesCard.jsx";
 
 
 const RentalDetail = (props) => {

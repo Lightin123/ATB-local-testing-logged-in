@@ -20,8 +20,8 @@ import {Form, FormControl, FormField, FormGroup, FormItem, FormLabel, FormMessag
 import {Card, CardContent, CardHeader, CardTitle} from "../../components/ui/card.tsx";
 import {Input} from "../../components/ui/input.tsx";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "../../components/ui/select.tsx";
-import {getRealEstateIcon, ListingStatus} from "../../utils/magicNumbers.js";
-import {RealEstateType} from "../../utils/magicNumbers.js";
+import {getRealEstateIcon, ListingStatus} from "../../utils/magicNumbers.jsx";
+import {RealEstateType} from "../../utils/magicNumbers.jsx";
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "../../components/ui/carousel.tsx";
 import {Button} from "../../components/ui/button.tsx";
 import {
@@ -32,11 +32,11 @@ import {
     DialogTitle,
     DialogTrigger
 } from "../../components/ui/dialog.tsx";
-import UnitCreationTable from "../../components/properties/UnitCreationTable.js";
+import UnitCreationTable from "../../components/properties/UnitCreationTable.jsx";
 import {useCreatePropertyMutation} from "../../services/api/propertyApi.ts";
 import {Navigate, useNavigate} from "react-router-dom";
 import {useSelector} from "react-redux";
-import {Progress} from "../../components/ui/multi-step.js";
+import {Progress} from "../../components/ui/multi-step.jsx";
 
 
 const PropertyCreation = () => {

@@ -12,9 +12,9 @@ import {
     DropdownMenuTrigger
 } from "../ui/dropdown-menu.tsx";
 import {useNavigate, Link} from "react-router-dom";
-import {RealEstateType} from "../../utils/magicNumbers.js";
+import {RealEstateType} from "../../utils/magicNumbers.jsx";
 import {useDeletePropertyMutation} from "../../services/api/propertyApi.ts";
-import { toast } from "../ui/use-toast.tsx";
+import { toast } from "../ui/use-toast.ts";
 
 import {Image} from "../ui/image.tsx"
 import {cn} from "../../utils.ts";

@@ -1,7 +1,7 @@
 import {createApi} from "@reduxjs/toolkit/query/react";
 import customFetchBase from "./customFetchBase.js";
 import {setAccessToken} from "../auth/authSlice.js";
-import {toast} from "../../components/ui/use-toast.tsx";
+import {toast} from "../../components/ui/use-toast.ts";
 
 
 export const authApi = createApi({

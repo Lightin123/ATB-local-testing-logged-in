@@ -5,18 +5,18 @@ import {
     selectLeasesByPropertyId,
     selectPaymentsByPropertyId
 } from "../../services/slices/objectSlice.js";
-import InfoCard from "../../components/home/InfoCard.js";
+import InfoCard from "../../components/home/InfoCard.jsx";
 import {isAfter} from "date-fns";
 import {moneyParser} from "../../utils/formatters.js";
 import PaymentScheduleTable from "../../components/financials/PaymentScheduleTable.tsx";
 import PaymentTable from "../../components/financials/PaymentTable.tsx";
 import {Button} from "../../components/ui/button.tsx";
 import {FilePlus2} from "lucide-react";
-import AddPayment from "../../components/payments/AddPayment.js";
+import AddPayment from "../../components/payments/AddPayment.jsx";
 import {useState} from "react";
 import {Tabs, TabsContent, TabsItem, TabsList} from "../../components/ui/tabs-new.tsx";
 import ExpensesTable from "../../components/financials/ExpensesTable.tsx";
-import AddExpense from "../../components/expenses/AddExpense.js";
+import AddExpense from "../../components/expenses/AddExpense.jsx";
 
 
 const Financials = (props) => {

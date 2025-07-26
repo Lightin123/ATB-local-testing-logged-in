@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import {FaCheck, FaHandshake} from "react-icons/fa6";
 import {cn} from "../utils.ts";
-import {MaintenanceStatus, PaymentScheduleStatus, Priority} from "./magicNumbers.js";
+import {MaintenanceStatus, PaymentScheduleStatus, Priority} from "./magicNumbers.jsx";
 
 export const LeaseStatusBadge = ({ status }) => {
     if (!status) return null

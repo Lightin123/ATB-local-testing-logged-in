@@ -5,7 +5,7 @@ import {Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandL
 import {Check, ChevronDown} from "lucide-react";
 import {cn} from "../../utils.ts";
 import {dateParser, moneyParser} from "../../utils/formatters.js";
-import {PaymentScheduleStatusBadge} from "../../utils/statusBadges.js";
+import {PaymentScheduleStatusBadge} from "../../utils/statusBadges.jsx";
 import {getNextScheduledPayment} from "../../utils/financials.js";
 
 

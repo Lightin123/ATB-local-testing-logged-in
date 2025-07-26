@@ -23,12 +23,12 @@ import {
 import {Building, Scroll} from "lucide-react";
 import {Input} from "../ui/input.tsx";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "../ui/select.tsx";
-import {LeaseStatus, PaymentFrequency} from "../../utils/magicNumbers.js";
+import {LeaseStatus, PaymentFrequency} from "../../utils/magicNumbers.jsx";
 import {Button} from "../ui/button.tsx";
 import {useUpdateLeaseMutation} from "../../services/api/leaseApi.js";
 import {Textarea} from "../ui/textarea.tsx";
-import TenantSelection from "../comboboxes/TenantSelection.js";
-import RentalSelection from "../comboboxes/RentalSelection.js";
+import TenantSelection from "../comboboxes/TenantSelection.jsx";
+import RentalSelection from "../comboboxes/RentalSelection.jsx";
 import {selectAllTenants, selectAllUnits} from "../../services/slices/objectSlice.js";
 import {useSelector} from "react-redux";
 

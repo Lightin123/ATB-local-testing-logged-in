@@ -16,7 +16,7 @@ import {Input} from "../ui/input.tsx";
 import {Button} from "../ui/button.tsx";
 import {useState} from "react";
 import {Save} from "lucide-react";
-import {CivilStatus} from "../../utils/magicNumbers.js";
+import {CivilStatus} from "../../utils/magicNumbers.jsx";
 import {useUpdateTenantMutation} from "../../services/api/tenantApi.js";
 import {tenantSchema} from "../../utils/formSchemas.js";
 import {isValidPhoneNumber} from "react-phone-number-input";

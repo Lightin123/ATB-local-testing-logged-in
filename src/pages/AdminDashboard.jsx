@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { useState } from 'react';
 import { useGetAdminPropertiesQuery, useGenerateOverwriteCodeMutation } from '../services/api/adminApi.js';
 import { useGetPropertyByIdQuery } from '../services/api/propertyApi.ts';
-import PropertyCard from '../components/properties/PropertyCard.js';
+import PropertyCard from '../components/properties/PropertyCard.jsx';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '../components/ui/dialog.tsx';
 import { Button } from '../components/ui/button.tsx';
 import { Checkbox } from '../components/ui/checkbox.tsx';

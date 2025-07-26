@@ -9,10 +9,10 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "../
 import {Textarea} from "../ui/textarea.tsx";
 import {useUpdateUserMutation} from "../../services/api/userApi.js";
 import {useEffect, useState} from "react";
-import ProfileCard from "./ProfileCard.js";
+import ProfileCard from "./ProfileCard.jsx";
 import {dateParser, zodStringPipe} from "../../utils/formatters.js";
 import {userSchema} from "../../utils/formSchemas.js";
-import {RealEstateType} from "../../utils/magicNumbers.js";
+import {RealEstateType} from "../../utils/magicNumbers.jsx";
 
 const titles = ['-','Mr', 'Mrs', 'Ms', 'Dr', 'Prof'];
 

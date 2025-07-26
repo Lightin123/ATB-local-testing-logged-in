@@ -2,12 +2,12 @@ import {
     ColumnDef,
 } from "@tanstack/react-table";
 import {dateParser, moneyParser} from "../../utils/formatters.js";
-import {DataTable} from "../ui/data-table.js";
+import {DataTable} from "../ui/data-table.jsx";
 import {LeasePaymentSchedule, RentPayment} from "../../utils/classes.ts";
-import {PaymentStatusBadge} from "../../utils/statusBadges.js";
+import {PaymentStatusBadge} from "../../utils/statusBadges.jsx";
 import {Check, Coins, Eye, MoreHorizontal, Pencil, Trash2} from "lucide-react";
-import ViewPayment from "../payments/ViewPayment.js"
-import {PaymentScheduleStatus, PaymentStatus} from "../../utils/magicNumbers.js";
+import ViewPayment from "../payments/ViewPayment.jsx"
+import {PaymentScheduleStatus, PaymentStatus} from "../../utils/magicNumbers.jsx";
 import {
     DropdownMenu,
     DropdownMenuContent,

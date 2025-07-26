@@ -1,5 +1,5 @@
 import {useGetPropertiesQuery} from "../../services/api/propertyApi.ts";
-import Building from "./Building.js";
+import Building from "./Building.jsx";
 const StreetMap = ({selected, onSelect}) => {
 
     const {data: properties, isLoading}  = useGetPropertiesQuery()

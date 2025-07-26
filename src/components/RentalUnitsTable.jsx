@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { DataTable } from './ui/data-table.js';
-import { ListingStatusBadge } from '../utils/statusBadges.js';
+import { DataTable } from './ui/data-table.jsx';
+import { ListingStatusBadge } from '../utils/statusBadges.jsx';
 import { dateParser, moneyParser } from '../utils/formatters.js';
 import AppLink from './general/Link.tsx';
 import EditRentalUnit from './rentals/EditRentalUnit';

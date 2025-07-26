@@ -11,7 +11,7 @@ import {
 } from "../ui/dropdown-menu.tsx";
 import {Button} from "../ui/button.tsx";
 import {MoreHorizontal, Pencil, Send, Trash2, UserRound} from "lucide-react";
-import {DataTable} from "../ui/data-table.js";
+import {DataTable} from "../ui/data-table.jsx";
 import {Avatar, AvatarFallback} from "../ui/avatar.tsx";
 import {useNavigate} from "react-router-dom";
 import {useSelector} from "react-redux";

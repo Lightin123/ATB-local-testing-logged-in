@@ -13,7 +13,7 @@ import {
 } from "../ui/dropdown-menu.tsx";
 import {logoutUser} from "../../services/auth/authActions.js";
 import {useNavigate} from "react-router-dom";
-import PropertySelection from "./PropertySelection.js";
+import PropertySelection from "./PropertySelection.jsx";
 
 const Header = () => {
     const userProfile = useSelector(state => state.authSlice.userInfo)

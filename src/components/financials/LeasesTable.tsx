@@ -3,11 +3,11 @@ import {
 } from "@tanstack/react-table";
 import {Checkbox} from "../ui/checkbox.tsx";
 import {dateParser, moneyParser} from "../../utils/formatters.js";
-import {DataTable} from "../ui/data-table.js";
+import {DataTable} from "../ui/data-table.jsx";
 import {Lease, RentPayment} from "../../utils/classes.ts";
 import {Eye, MoreHorizontal, Pencil, Scroll, Trash2} from "lucide-react";
-import {LeaseStatusBadge} from "../../utils/statusBadges.js";
-import {LeaseStatus} from "../../utils/magicNumbers.js";
+import {LeaseStatusBadge} from "../../utils/statusBadges.jsx";
+import {LeaseStatus} from "../../utils/magicNumbers.jsx";
 import Link from "../general/Link.tsx";
 import {useMemo, useState} from "react";
 import {useDeleteLeaseMutation} from "../../services/api/leaseApi";
@@ -22,7 +22,7 @@ import EditLease from "../leases/EditLease";
 import DeleteDialog from "../general/DeleteDialog";
 import {useDeleteLeasesMutation, useUpdateLeasesMutation} from "../../services/api/bulkApi";
 import {Button} from "../ui/button.tsx";
-import ViewLease from "../leases/ViewLease.js";
+import ViewLease from "../leases/ViewLease.jsx";
 import {isWithinInterval, subDays} from "date-fns";
 import {ButtonGroup, ButtonGroupItem} from "../ui/button-group.tsx";
 

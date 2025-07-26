@@ -26,15 +26,15 @@ import {Coins, PlusIcon} from "lucide-react";
 import {zodDateInputPipe, zodNumberInputPipe, zodStringPipe} from "../../utils/formatters.js";
 import { useGetLeasesQuery} from "../../services/api/leaseApi.js";
 import {useCreatePaymentMutation} from "../../services/api/financialsApi.js";
-import LeaseSelection from "../comboboxes/LeaseSelection.js";
+import LeaseSelection from "../comboboxes/LeaseSelection.jsx";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "../ui/select.tsx";
-import {PaymentStatus} from "../../utils/magicNumbers.js";
+import {PaymentStatus} from "../../utils/magicNumbers.jsx";
 import {Checkbox} from "../ui/checkbox.tsx";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "../ui/tooltip.tsx";
 import {AiOutlineQuestionCircle} from "react-icons/ai";
 import {getNextScheduledPayment, getScheduledPaymentStatus} from "../../utils/financials.js";
 import {useState} from "react";
-import {PaymentScheduleStatusBadge} from "../../utils/statusBadges.js";
+import {PaymentScheduleStatusBadge} from "../../utils/statusBadges.jsx";
 import {cn} from "../../utils.ts";
 
 
