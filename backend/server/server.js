@@ -35,7 +35,14 @@ import authRoutes from './routes/authRoutes.js';
 
 const PORT = process.env.PORT || 3000;
 const app = express();
-const allowedOrigins = [process.env.CLIENT_URL || 'http://localhost:5173'];
+
+// Allow local dev and production origin from env
+const allowedOrigins = [
+  process.env.CLIENT_URL,       // e.g. Netlify frontend URL
+  'http://localhost:5173'       // local Vite dev server
+].filter(Boolean);
+console.log('CORS Allowed Origins:', allowedOrigins);
+
 // Create HTTP server and attach Socket.IO
 const httpServer = http.createServer(app);
 const io = new IOServer(httpServer, {
@@ -69,9 +76,10 @@ maintenanceIo.on('connection', socket => {
     console.log(`Socket.IO: client disconnected (${socket.id})`);
   });
 });
+
 const rootRouter = express.Router();
 
-// CORS
+// CORS middleware
 app.use(
   cors({
     origin: allowedOrigins,
@@ -101,10 +109,7 @@ app.use('/api/expenses', expenseRouter);
 app.use('/api/messages', messageRouter);
 app.use('/api', authRoutes);
 
-// Root auth & misc routes
-app.use('/', rootRouter);
-
-// Health-check
+// Health-check route
 app.get('/', (req, res) => res.send('Hello World!'));
 
 // Auth routes
@@ -112,17 +117,17 @@ rootRouter.post('/signup', authController.createUser);
 rootRouter.post('/login', authController.login);
 rootRouter.post('/refresh', authController.refresh);
 
-// Other routes unchanged...
-// Overdue payments job
+// Schedule overdue payments job
 cron.schedule('0 0 * * *', checkOverduePayments);
 
+// Global error handler
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Something broke!');
 });
 
-
+// Start server
+const externalUrl = process.env.RENDER_EXTERNAL_URL || `http://0.0.0.0:${PORT}`;
 httpServer.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server listening on http://0.0.0.0:${PORT}`);
+  console.log(`Server listening at ${externalUrl}`);
 });
-
