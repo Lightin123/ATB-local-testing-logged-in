@@ -36,10 +36,12 @@ import authRoutes from './routes/authRoutes.js';
 const PORT = process.env.PORT || 3000;
 const app = express();
 
-// Allow local dev and production origin from env
+// Normalize CLIENT_URL and allow local dev
+const rawClientUrl = process.env.CLIENT_URL;
+const clientUrl = rawClientUrl?.replace(/\/+$/, '');
 const allowedOrigins = [
-  process.env.CLIENT_URL,       // e.g. Netlify frontend URL
-  'http://localhost:5173'       // local Vite dev server
+  clientUrl,                  // production frontend URL
+  'http://localhost:5173'     // local Vite dev server
 ].filter(Boolean);
 console.log('CORS Allowed Origins:', allowedOrigins);
 
@@ -57,9 +59,7 @@ const maintenanceIo = io.of('/maintenance');
 // Authenticate socket connections using JWT token from handshake
 maintenanceIo.use((socket, next) => {
   const token = socket.handshake.auth?.token;
-  if (!token) {
-    return next(new Error('Unauthorized'));
-  }
+  if (!token) return next(new Error('Unauthorized'));
   try {
     const payload = jwt.verify(token, process.env.SECRET_KEY);
     socket.user = payload;
@@ -69,21 +69,22 @@ maintenanceIo.use((socket, next) => {
   }
 });
 
-// Basic connection handler
+// Connection handler
 maintenanceIo.on('connection', socket => {
   console.log(`Socket.IO: client connected (${socket.id})`);
-  socket.on('disconnect', () => {
-    console.log(`Socket.IO: client disconnected (${socket.id})`);
-  });
+  socket.on('disconnect', () => console.log(`Socket.IO: client disconnected (${socket.id})`));
 });
 
-const rootRouter = express.Router();
-
-// CORS middleware
+// Apply CORS before routes
 app.use(
   cors({
-    origin: allowedOrigins,
-    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+    origin: (origin, callback) => {
+      // allow requests with no origin (e.g. mobile apps, curl)
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.includes(origin)) return callback(null, true);
+      return callback(new Error(`Origin ${origin} not allowed by CORS`));
+    },
+    methods: ['GET','POST','PUT','PATCH','DELETE','OPTIONS'],
     credentials: true
   })
 );
@@ -92,13 +93,11 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Mount routers under /api to match front-end calls
+// Mount routers
 app.use('/api/contact', contactRouter);
 app.use('/api/admin/whitelist', adminWhitelistRouter);
 app.use('/api/admin', adminRouter);
 app.use('/api/maintenance', maintenanceRouter);
-
-// Mount resource routers
 app.use('/api/user', userRouter);
 app.use('/api/properties', propertyRouter);
 app.use('/api/units', unitRouter);
@@ -109,15 +108,17 @@ app.use('/api/expenses', expenseRouter);
 app.use('/api/messages', messageRouter);
 app.use('/api', authRoutes);
 
-// Health-check route
+// Health-check
 app.get('/', (req, res) => res.send('Hello World!'));
 
 // Auth routes
+const rootRouter = express.Router();
 rootRouter.post('/signup', authController.createUser);
 rootRouter.post('/login', authController.login);
 rootRouter.post('/refresh', authController.refresh);
+app.use('/', rootRouter);
 
-// Schedule overdue payments job
+// Overdue payments cron job
 cron.schedule('0 0 * * *', checkOverduePayments);
 
 // Global error handler
