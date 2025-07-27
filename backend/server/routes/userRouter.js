@@ -12,9 +12,9 @@ const router = express.Router();
 router.get('/', authenticateToken, getCurrentUser);
 
 // Update a user
-router.patch('/:id', authenticateToken, updateUser);
+router.patch('/', authenticateToken, updateUser);
 
 // Delete a user
-router.delete('/:id', authenticateToken, deleteUser);
+router.delete('/', authenticateToken, deleteUser);
 
 export default router;
