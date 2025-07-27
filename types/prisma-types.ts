@@ -1,0 +1,9 @@
+export type AccountStatus = string;
+export type AmenitiesOnRealEstate = unknown;
+export type CurrencyCode = string;
+export type Image = unknown;
+export type ListingStatus = string;
+export type Message = unknown;
+export type PreferencesOnRealEstate = unknown;
+export type RealEstateType = string;
+export type UserRole = string;
