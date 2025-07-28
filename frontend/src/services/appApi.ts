@@ -97,7 +97,7 @@ export const appApi = createApi({
         method: 'GET',
       }),
       transformResponse: (response: ApiResponse<Unit>) => response.data,
-      providesTags: (result) => [
+      providesTags: (result=[]) => [
         ...(result ?? []).map((item) => ({ type: 'Units' as const, id: item.id })),
         { type: 'Units', id: 'LIST' },
       ],
@@ -175,7 +175,7 @@ export const appApi = createApi({
         method: 'GET',
       }),
       transformResponse: (response: ApiResponse<Tenant>) => response.data,
-      providesTags: (result) => [
+      providesTags: (result=[]) => [
         ...(result ?? []).map((item) => ({ type: 'Tenants' as const, id: item.id })),
         { type: 'Tenants', id: 'LIST' },
       ],
@@ -184,7 +184,7 @@ export const appApi = createApi({
       query: (unitId: number | undefined) =>
         unitId != null ? `/api/maintenance?unitId=${unitId}` : '/api/maintenance',
       transformResponse: (response: ApiResponse<Maintenance>) => response.data,
-      providesTags: (result) => [
+      providesTags: (result = []) => [
         ...(result ?? []).map((item) => ({ type: 'Maintenance' as const, id: item.id })),
         { type: 'Maintenance', id: 'LIST' },
       ],
@@ -195,7 +195,7 @@ export const appApi = createApi({
         method: 'GET',
       }),
       transformResponse: (response: ApiResponse<Payment>) => response.data,
-      providesTags: (result) => [
+      providesTags: (result=[]) => [
         ...(result ?? []).map((item) => ({ type: 'Payments' as const, id: item.id })),
         { type: 'Payments', id: 'LIST' },
       ],
